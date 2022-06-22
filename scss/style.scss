@@ -110,15 +110,15 @@ body {
 
 .sp {
     @include mq(tab) {
-        display: none;
+        display: none !important;
     }
 
     @include mq(dtp) {
-        display: none;
+        display: none !important;
     }
 
     @include mq(fhd) {
-        display: none;
+        display: none !important;
     }
 }
 
