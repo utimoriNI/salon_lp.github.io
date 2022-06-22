@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="説明文">
+    <title>タイトル</title>
+
+    <!-- css start -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@300;400;500;600&family=Poppins:wght@400;600&family=Source+Serif+Pro:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/7a029ca38c.js" crossorigin="anonymous"></script>
+    <!-- css end -->
+
+    <!-- ogp start -->
+    <!-- ogp end -->
+</head>
+
+<body id="app">
+    <!-- header start -->
+    <header>
+        <div class="header-wrap">
+            <h1 class="logo"><a href="#">ECサイト制作代行</a></h1>
+            <nav>
+                <ul class="sans-serif pc" v-show="width > 1023">
+                    <li><a href=" #">SERVICE</a></li>
+                    <li><a href="#">PLAN</a></li>
+                    <li><a href="#">PRICE</a></li>
+                    <li><a href="#">REVIEW</a></li>
+                    <li><a href="#">WORKS</a></li>
+                    <li><a href="#">Q&A</a></li>
+                    <li><a href="#">FLOW</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                    <li><a href="#">COMPANY</a></li>
+                </ul>
+
+                <div class="hambueger" v-show="width < 1024">
+                    <button type="button" @click="open=!open" v-show="!open">
+                        <p><i class="fas fa-bars"></i></p>
+                    </button>
+                </div>
+                <div class="overlay" v-show="open">
+                    <p class="close" @click="open=false"><i class="fas fa-times"></i></p>
+                    <ul class="sans-serif" v-show="width < 1024">
+                        <li><a href=" #">SERVICE</a></li>
+                        <li><a href="#">PLAN</a></li>
+                        <li><a href="#">PRICE</a></li>
+                        <li><a href="#">REVIEW</a></li>
+                        <li><a href="#">WORKS</a></li>
+                        <li><a href="#">Q&A</a></li>
+                        <li><a href="#">FLOW</a></li>
+                        <li><a href="#">CONTACT</a></li>
+                        <li><a href="#">COMPANY</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- header end -->
+    <div class="kv">
+        <img src="img/kv.jpg" alt="">
+    </div>
+
+    <main id="app">
+        <div class="introduced">
+            <div class="minihead">
+                <h4>Introduced Stores</h4>
+                <div class="subtitle">導入店舗</div>
+            </div>
+            <div class="stores">
+                <img src="img/sample.jpg" alt="">
+                <img src="img/sample.jpg" alt="">
+                <img src="img/sample.jpg" alt="">
+                <img src="img/sample.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="service">
+            <div class="head">
+                <h3 class="serif">Service</h3>
+                <div class="subtitle">サービス内容</div>
+            </div>
+
+            <div class="text introduction">
+                <p>
+                    このサービスは美容室向けにオンラインショップの構築を請け負うサービスです。
+                    オンラインショップの開設によって販路の拡大や新規顧客の獲得をお手伝いします。
+                </p>
+
+                <p>
+                    このサービスでは、Shopifyというオンラインショップ構築用のプラットフォームを使用して
+                    ローコストかつ最短一週間で納品いたします。
+                </p>
+
+                <p>
+                    また、オンラインショップ開設後の運用作業も弊社が担当します。
+                    受発注業務、問い合わせ対応といったなどの作業まで担当することで、
+                    オンラインショップで扱う商品を選んでいただくだけで、オンラインショップが運用可能です。
+                </p>
+            </div>
+
+            <div class="features">
+                <div class="minihead">
+                    <h4>Features</h4>
+                    <div class="subtitle">サービスの特長</div>
+                </div>
+
+                <div class="function">
+                    <h5>Shopifyの機能</h5>
+                    <p class="text">本サービスで使用されているShopifyは、世界で170万以上のオンラインショップで使用されているプラットフォームです。</p>
+
+                    <div class="panels">
+                        <div class="panel">
+                            <div class="panel-contents">
+                                <img src="/img/cart.svg" alt="カート機能">
+                                <p class="panel-text gothic">カート機能</p>
+                            </div>
+                        </div>
+
+                        <div class="panel">
+                            <div class="panel-contents">
+                                <img src="/img/box.svg" alt="商品管理">
+                                <p class="panel-text gothic">商品管理</p>
+                            </div>
+                        </div>
+
+                        <div class="panel">
+                            <div class="panel-contents">
+                                <img src="/img/graph.svg" alt="売上管理">
+                                <p class="panel-text gothic">売上管理</p>
+                            </div>
+                        </div>
+
+                        <div class="panel">
+                            <div class="panel-contents">
+                                <img src="/img/SNS.svg" alt="顧客管理">
+                                <p class="panel-text gothic">顧客管理</p>
+                            </div>
+                        </div>
+
+                        <div class="panel">
+                            <div class="panel-contents">
+                                <img src="/img/license.svg" alt="会員管理">
+                                <p class="panel-text gothic">会員管理</p>
+                            </div>
+                        </div>
+
+                        <div class="panel">
+                            <div class="panel-contents">
+                                <img src="/img/SEO.svg" alt="マーケティング">
+                                <p class="panel-text gothic">マーケティング<br><span class="sp-none">SEO</span></p>
+                            </div>
+                        </div>
+
+                        <div class="panel">
+                            <div class="panel-contents">
+                                <img src="/img/layout.svg" alt="デザイン">
+                                <p class="panel-text gothic">デザイン<br><span class="sp-none">テンプレート</span></p>
+                            </div>
+                        </div>
+
+                        <div class="panel">
+                            <div class="panel-contents">
+                                <img src="/img/html.svg" alt="カスタマイズ">
+                                <p class="panel-text gothic"><span class="sp-none">HTML・CSS</span><br>カスタマイズ</p>
+                            </div>
+                        </div>
+
+                        <div class="panel">
+                            <div class="panel-contents">
+                                <img src="/img/longtale.svg" alt="商品分析">
+                                <p class="panel-text gothic">商品分析</p>
+                            </div>
+                        </div>
+
+                        <div class="panel">
+                            <div class="panel-contents">
+                                <img src="/img/loupe.svg" alt="サイト分析">
+                                <p class="panel-text gothic">サイト分析</p>
+                            </div>
+                        </div>
+
+                        <div class="panel">
+                            <div class="panel-contents">
+                                <img src="/img/net.svg" alt="スマホで運営">
+                                <p class="panel-text gothic">スマホで運営</p>
+                            </div>
+                        </div>
+
+                        <div class="panel">
+                            <div class="panel-contents">
+                                <img src="/img/earth.svg" alt="海外展開">
+                                <p class="panel-text gothic">海外展開</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <section class="block">
+                        <carousel :img-list="images"></carousel>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+        <div class="plan">
+            <div class="head">
+                <h3 class="serif">Plan</h3>
+                <div class="subtitle">2つのプラン</div>
+            </div>
+        </div>
+
+        <div class="price">
+            <div class="head">
+                <h3 class="serif">Price</h3>
+                <div class="subtitle">料金</div>
+            </div>
+
+            <div class="list">
+                <ul class="price-columns tab">
+                    <li class="column-label">
+                        <ul>
+                            <li>初期費用</li>
+                            <li>運用費</li>
+                            <li>
+                                <div>成果報酬費<p class="note">（月間売上高より）</p>
+                                </div>
+                            </li>
+                            <li>デザイン</li>
+                            <li>製作期間</li>
+                            <li>運用サポート</li>
+                            <li>オリジナル<br>コンテンツ</li>
+                        </ul>
+                    </li>
+                    <li class="column-contents">
+                        <p class="tag gothic">ローコスト&短納期で始めたい方向け</p>
+                        <div class="plan-title">
+                            <div>
+                                <p class="gothic">ライトプラン</p>
+                                <p class="price-number num"><span>&yen;</span>0~</p>
+                            </div>
+                        </div>
+
+                        <ul class="plan-cell">
+                            <li class="num">&yen;0</li>
+                            <li class="num">&yen;50,000</li>
+                            <li><span class="num">15</span>%</li>
+                            <li>テンプレートを使用</li>
+                            <li><span class="num">1</span>週間～</li>
+                            <li class="num"><i class="far fa-circle"></i></li>
+                            <li class="num"><i class="fas fa-times"></i></li>
+                        </ul>
+                    </li>
+
+                    <li class="column-contents">
+                        <p class="tag gothic basic">コンテンツにこだわりたい方向け</p>
+                        <div class="plan-title basic">
+                            <div>
+                                <p class="gothic">ベーシックプラン</p>
+                                <p class="price-number num"><span>&yen;</span>200,000~</p>
+                            </div>
+                        </div>
+
+                        <ul class="plan-cell">
+                            <li class="num">&yen;200,000~</li>
+                            <li class="num">&yen;50,000</li>
+                            <li><span class="num">10</span>%</li>
+                            <li>ヒアリングからお客様と並走</li>
+                            <li><span class="num">1</span>週間～</li>
+                            <li class="num"><i class="far fa-circle"></i></li>
+                            <li class="num"><i class="far fa-circle"></i></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <div class="column-contents sp">
+                    <p class="tag gothic">ローコスト&短納期で始めたい方向け</p>
+                    <div class="plan-title">
+                        <div>
+                            <p class="gothic">ライトプラン</p>
+                            <p class="price-number num"><span>&yen;</span>0~</p>
+                        </div>
+                    </div>
+
+                    <ul class="plan-cell">
+                        <li class="num">
+                            <p class="plan-header">初期費用</p>
+                            <p>&yen;0</p>
+                        </li>
+                        <li class="num">
+                            <p class="plan-header">運用費</p>
+                            <p>&yen;50,000</p>
+                        </li>
+                        <li>
+                            <p class="plan-header">成果報酬費<span>（月間売上高より）</span></p>
+                            <p><span class="num">15</span>%</p>
+                        </li>
+                        <li>
+                            <p class="plan-header">デザイン</p>
+                            <p class="jp">テンプレートを使用</p>
+                        </li>
+                        <li>
+                            <p class="plan-header">製作期間</p>
+                            <p class="jp"><span class="num">1</span>週間～</p>
+                        </li>
+                        <li class="num">
+                            <p class="plan-header">運用サポート</p>
+                            <i class="far fa-circle"></i>
+                        </li>
+                        <li class="num">
+                            <p class="plan-header">オリジナルコンテンツ</p>
+                            <i class="fas fa-times"></i>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="column-contents sp">
+                    <p class="tag gothic basic">コンテンツにこだわりたい方向け</p>
+                    <div class="plan-title basic">
+                        <div>
+                            <p class="gothic">ベーシックプラン</p>
+                            <p class="price-number num"><span>&yen;</span>200,000~</p>
+                        </div>
+                    </div>
+
+                    <ul class="plan-cell">
+                        <li class="num">
+                            <p class="plan-header">初期費用</p>
+                            <p>&yen;200,000~</p>
+                        </li>
+                        <li class="num">
+                            <p class="plan-header">運用費</p>
+                            <p>&yen;50,000</p>
+                        </li>
+                        <li>
+                            <p class="plan-header">成果報酬費<span>（月間売上高より）</span></p>
+                            <p><span class="num">10</span>%</p>
+                        </li>
+                        <li>
+                            <p class="plan-header">デザイン</p>
+                            <p class="jp">ヒアリングからお客様と並走</p>
+                        </li>
+                        <li>
+                            <p class="plan-header">製作期間</p>
+                            <p class="jp"><span class="num">1</span>週間～</p>
+                        </li>
+                        <li class="num">
+                            <p class="plan-header">運用サポート</p>
+                            <i class="far fa-circle"></i>
+                        </li>
+                        <li class="num">
+                            <p class="plan-header">オリジナルコンテンツ</p>
+                            <i class="far fa-circle"></i>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="note">
+                    <p>※表示価格は税込みです</p>
+                    <p>※最低契約期間は2年です</p>
+                </div>
+            </div>
+
+            <div class="option">
+                <h5>オプション</h5>
+                <div class="option-contents">
+                    <h6>1.コンテンツ制作</h6>
+                    <p class="option-price">&yen;30,000~ / 記事</p>
+                    <p>オススメ商品やスタッフの紹介ページなどを作成します。</p>
+                    <img src="/img/kv.jpg">
+                </div>
+                <div class="option-contents">
+                    <h6>2.オンラインレクチャー</h6>
+                    <p class="option-price">&yen;30,000~ / h</p>
+                    <p>EC成功店舗によるオンラインレクチャーを行います。</p>
+                    <p>内容については別途ご相談ください。</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="review">
+            <div class="head">
+                <h3 class="serif">Review</h3>
+                <div class="subtitle">お客様の声</div>
+            </div>
+
+            <div class="case">
+                <div class="case-contents">
+                    <p class="case-label">CASE 01</p>
+                    <h6>Tenmei</h6>
+                    <p class="case-title">運用までサポートしてもらえるので、
+                        安心してオンラインショップを開設できました。</p>
+                    <div class="case-movie">
+                        <img src="/img/kv.jpg" alt="" srcset="">
+                        <ul>
+                            <li><span>プラン</span>：ベーシックプラン</li>
+                            <li><span>製作費</span> ：&yen;30,000</li>
+                            <li><span>製作期間</span>：2週間</li>
+                        </ul>
+                    </div>
+                    <p class="case-discription">
+                        店頭でしか販売していない商品を手軽に購入できるように思い、オンラインショップの制作をお願いしました。在庫や注文の管理といった運用までサポートしてもらえるので、安心してオンラインショップを開設できました。
+                    </p>
+                </div>
+
+                <div class="case-contents">
+                    <p class="case-label">CASE 02</p>
+                    <h6>Tenmei</h6>
+                    <p class="case-title">運用までサポートしてもらえるので、
+                        安心してオンラインショップを開設できました。</p>
+                    <div class="case-movie">
+                        <img src="/img/kv.jpg" alt="" srcset="">
+                        <ul>
+                            <li><span>プラン</span>：ベーシックプラン</li>
+                            <li><span>製作費</span> ：&yen;30,000</li>
+                            <li><span>製作期間</span>：2週間</li>
+                        </ul>
+                    </div>
+                    <p class="case-discription">
+                        店頭でしか販売していない商品を手軽に購入できるように思い、オンラインショップの制作をお願いしました。在庫や注文の管理といった運用までサポートしてもらえるので、安心してオンラインショップを開設できました。
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="works">
+            <div class="head">
+                <h3 class="serif">Works</h3>
+                <div class="subtitle">制作事例</div>
+            </div>
+            <div class="works-contents">
+                <div class="work">
+                    <img src="/img/kv.jpg" alt="" srcset="">
+                    <p class="name">店名</p>
+                </div>
+                <div class="work">
+                    <img src="/img/kv.jpg" alt="" srcset="">
+                    <p class="name">店名</p>
+                </div>
+                <div class="work">
+                    <img src="/img/kv.jpg" alt="" srcset="">
+                    <p class="name">店名</p>
+                </div>
+                <div class="work" v-show="width > 1023">
+                    <img src="/img/kv.jpg" alt="" srcset="">
+                    <p class="name">店名</p>
+                </div>
+                <div class="work" v-show="width > 1023">
+                    <img src="/img/kv.jpg" alt="" srcset="">
+                    <p class="name">店名</p>
+                </div>
+                <div class="work" v-show="width > 1023">
+                    <img src="/img/kv.jpg" alt="" srcset="">
+                    <p class="name">店名</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq">
+            <div class="head">
+                <h3 class="serif">Q&A</h3>
+                <div class="subtitle">よくある質問</div>
+            </div>
+
+            <div class="faq-contents">
+                <div class="question">
+                    <div class="question-contents">
+                        <p class="question-title">Q. 納期はどれくらいですか？</p>
+                        <p class="answer">A. 各ECシステムのテンプレートを利用いただく場合、最短一週間でオープン可能です。</p>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <div class="question-contents">
+                        <p class="question-title">Q. 納期はどれくらいですか？</p>
+                        <p class="answer">A. 各ECシステムのテンプレートを利用いただく場合、最短一週間でオープン可能です。</p>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <div class="question-contents">
+                        <p class="question-title">Q. 納期はどれくらいですか？</p>
+                        <p class="answer">A. 各ECシステムのテンプレートを利用いただく場合、最短一週間でオープン可能です。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="flow">
+            <div class="head">
+                <h3 class="serif">Flow</h3>
+                <div class="subtitle">オープンまでの流れ</div>
+            </div>
+
+            <div class="flow-contents pc-only">
+                <ol class="left">
+                    <li>
+                        <div class="flow-part">
+                            <p class="flow-title">
+                                お問い合わせ
+                            </p>
+                            <p class="flow-description">
+                                フォームよりご連絡下さい。折り返しご連絡を差し上げます。
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flow-part">
+                            <p class="flow-title">
+                                お問い合わせ
+                            </p>
+                            <p class="flow-description">
+                                フォームよりご連絡下さい。折り返しご連絡を差し上げます。
+                            </p>
+                        </div>
+                    </li>
+                </ol>
+
+                <ol class="center">
+                    <li>
+                        <p>01</p>
+                        <div class="line"></div>
+                    </li>
+                    <li>
+                        <p>02</p>
+                        <div class="line"></div>
+                    </li>
+                    <li>
+                        <p>03</p>
+                        <div class="line"></div>
+                    </li>
+                    <li>
+                        <p>04</p>
+                    </li>
+                </ol>
+
+                <ol class="right">
+                    <li>
+                        <div class="flow-part">
+                            <p class="flow-title">
+                                お問い合わせ
+                            </p>
+                            <p class="flow-description">
+                                フォームよりご連絡下さい。折り返しご連絡を差し上げます。
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flow-part">
+                            <p class="flow-title">
+                                お問い合わせ
+                            </p>
+                            <p class="flow-description">
+                                フォームよりご連絡下さい。折り返しご連絡を差し上げます。
+                            </p>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+
+            <div class="flow-contents sp">
+                <div class="flow-part">
+                    <p class="flow-title">
+                        1.お問い合わせ
+                    </p>
+                    <p class="flow-description">
+                        フォームよりご連絡下さい。折り返しご連絡を差し上げます。
+                    </p>
+                </div>
+
+                <div class="flow-part">
+                    <p class="flow-title">
+                        2.お問い合わせ
+                    </p>
+                    <p class="flow-description">
+                        フォームよりご連絡下さい。折り返しご連絡を差し上げます。
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact">
+            <div class="head">
+                <h3 class="serif">Contact</h3>
+                <div class="subtitle">お問い合わせ</div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-wrap">
+                <p class="sans-serif footer-title">MENU</p>
+                <nav class="footer-nav">
+                    <ul class="sans-serif">
+                        <li><a href="#">SERVICE</a></li>
+                        <li><a href="#">PLAN</a></li>
+                        <li><a href="#">PRICE</a></li>
+                        <li><a href="#">REVIEW</a></li>
+                        <li><a href="#">WORKS</a></li>
+                        <li><a href="#">Q&A</a></li>
+                        <li><a href="#">FLOW</a></li>
+                        <li><a href="#">CONTACT</a></li>
+                        <li><a href="#">COMPANY</a></li>
+                    </ul>
+                </nav>
+                <div class="company-info">
+                    <div><img src="/img/logo.png" alt=""></div>
+                    <p class="copyright sans-serif">COPYRIGHT 2022 DSP CO., LTD</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+    <script src="./import.js"></script>
+</body>
+
+</html>

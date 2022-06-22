@@ -1,0 +1,972 @@
+@import "import";
+@import "mixin";
+
+// global start
+html {
+    letter-spacing: 0.12em;
+    font-family: "Noto Serif JP", serif;
+    font-size: 10px;
+    color: $main-text;
+
+    h5 {
+        font-size: 2.8rem;
+        color: $accent;
+        font-weight: 600;
+        margin-bottom: $faq-margin;
+
+        @include mq(sp) {
+            margin-bottom: 18px;
+        }
+    }
+
+    @include mq(dtp) {
+        font-size: 9px;
+    }
+
+    @include mq(sp) {
+        font-size: 8px;
+        letter-spacing: 0.11em;
+    }
+}
+
+body {
+    text-align: center;
+    font-size: 1.6rem;
+    line-height: 1.96;
+}
+
+.sans-serif {
+    font-family: "Poppins", sans-serif;
+    letter-spacing: 0.08em;
+}
+
+.serif {
+    font-family: "Libre Baskerville", serif;
+}
+
+.gothic {
+    font-family: 'Noto Sans JP',
+        sans-serif;
+}
+
+.num {
+    font-family: 'Source Serif Pro',
+        serif;
+}
+
+.subtitle {
+    font-family: "Noto Sans JP", serif;
+    color: $accent;
+    font-weight: 500;
+    font-size: 1.8rem;
+    position: relative;
+    display: inline-block;
+    padding: 0 40px;
+
+    @include mq(sp) {
+        font-size: 1.4rem;
+        padding: 0 24px;
+    }
+
+    &:before,
+    &::after {
+        content: " ";
+        position: absolute;
+        top: 50%;
+        display: inline-block;
+        width: 30px;
+        height: 2px;
+        background-color: $accent;
+
+        @include mq(sp) {
+            width: 16px;
+        }
+    }
+
+    &:before {
+        left: 0;
+    }
+
+    &:after {
+        right: 0;
+    }
+}
+
+.pc-only {
+    @include mq(sp) {
+        display: none !important;
+    }
+
+    @include mq(tab) {
+        display: none !important;
+    }
+}
+
+.tab {
+    @include mq(sp) {
+        display: none !important;
+    }
+}
+
+.sp {
+    @include mq(tab) {
+        display: none;
+    }
+
+    @include mq(dtp) {
+        display: none;
+    }
+
+    @include mq(fhd) {
+        display: none;
+    }
+}
+
+.head {
+    margin-bottom: $subhead-margin;
+    line-height: 1.34;
+
+    @include mq(sp) {
+        margin-bottom: 24px;
+    }
+
+    h3 {
+        font-family: "Libre Baskerville", serif;
+        font-size: 6rem;
+        letter-spacing: 0.1em;
+
+        @include mq(sp) {
+            font-size: 4.2rem;
+        }
+    }
+}
+
+.minihead {
+    margin-bottom: 24px;
+    line-height: 1.2;
+
+    h4 {
+        font-family: "Libre Baskerville", serif;
+        font-size: 4rem;
+
+        @include mq(sp) {
+            font-size: 2.8rem;
+        }
+    }
+}
+
+.carousel {
+    display: flex;
+    position: relative;
+    width: 100%;
+
+    button {
+        height: 100%;
+        opacity: 0.5;
+        font-size: 2em;
+    }
+
+    img {
+        height: $media-height;
+    }
+
+    .btn_left {
+        z-index: 1;
+        width: 8%;
+        height: $media-height;
+    }
+
+    .btn_right {
+        z-index: 1;
+        width: 8%;
+        height: 3$media-height;
+    }
+}
+
+.slider {
+    overflow: hidden;
+    position: relative;
+    height: $media-height;
+    margin: 0 auto;
+    background-color: #fff;
+
+    div {
+        overflow-x: scroll;
+    }
+}
+
+// global end
+
+// header start
+header {
+    top: 0;
+    width: 100%;
+    position: fixed;
+    background-color: #fff;
+    z-index: 5;
+    height: 70px;
+    display: flex;
+    padding: 5px 0;
+    box-shadow: 0 4px 8px 0 rgba($color: #342c13, $alpha: 0.2);
+
+    @include mq(sp) {
+        height: 34px;
+    }
+
+    .header-wrap {
+        width: 95%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+
+        @include mq(sp) {
+            width: 88%;
+        }
+
+        .pc {
+            display: flex;
+            align-items: center;
+
+            li {
+                font-size: 14px;
+                padding-right: 25px;
+                border-right: 2px solid #97801a;
+                margin-right: 25px;
+
+                @include mq(dtp) {
+                    padding-right: 20px;
+                    margin-right: 20px;
+                }
+
+                &:last-child {
+                    padding-right: 0;
+                    margin-right: 0;
+                    border: none;
+                }
+            }
+        }
+
+        .overlay {
+            z-index: 5;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba($color: $main-text, $alpha: 0.78);
+            color: #fff;
+
+            .close {
+                text-align: right;
+                font-size: 32px;
+                padding: 12px 24px 0 0;
+                line-height: 1;
+            }
+
+            ul {
+                display: block;
+                width: 80%;
+                margin: 0 auto;
+                font-size: 2rem;
+
+                li {
+                    border-bottom: 1px solid #fff;
+                    padding-bottom: 6px;
+                    margin-bottom: 6px;
+                }
+            }
+        }
+    }
+}
+
+// header end
+
+.kv {
+    width: 100%;
+    height: auto;
+
+    img {
+        width: 100%;
+    }
+}
+
+main {
+    width: 100%;
+
+    .introduced {
+        background-color: $subtone;
+        padding: 80px 0;
+
+        @include mq(sp) {
+            padding: 40px 0;
+        }
+
+        .stores {
+            width: 960px;
+            display: flex;
+            justify-content: space-around;
+            margin: 0 auto;
+
+            @include mq(tab) {
+                width: 769px;
+            }
+
+            @include mq(sp) {
+                width: 375px;
+                flex-wrap: wrap;
+
+                img {
+                    width: 35%;
+                    margin-bottom: 16px;
+                }
+            }
+        }
+    }
+
+    .service {
+        width: 100%;
+        margin: 0 auto;
+        padding: 152px 0;
+
+        @include mq(sp) {
+            padding: 80px 0;
+        }
+
+        .introduction {
+            width: 720px;
+            margin: 0 auto;
+
+            @include mq(sp) {
+                width: 375px;
+            }
+        }
+
+        .text {
+            margin: 0 auto $contents-margin auto;
+
+            @include mq(sp) {
+                margin-bottom: 40px;
+            }
+
+            p {
+                margin-bottom: 30px;
+                font-weight: 500;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        .function {
+            width: 890px;
+            margin: 0 auto;
+            margin-bottom: $section-margin;
+
+            @include mq(sp) {
+                width: 375px;
+                margin-bottom: 80px;
+            }
+
+            .panels {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+
+                .panel {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 200px;
+                    height: 200px;
+                    background-color: $subtone;
+                    margin-bottom: 25px;
+
+                    @include mq(sp) {
+                        width: 180px;
+                        height: 180px;
+                        margin: 0 auto 16px auto;
+                    }
+
+                    img {
+                        height: 85px;
+                        fill: $accent;
+                        margin-bottom: 8px;
+                    }
+
+                    p {
+                        font-size: 1.8rem;
+                        line-height: 1.2;
+                    }
+                }
+            }
+
+        }
+    }
+
+    .plan {
+        margin-bottom: $section-margin;
+    }
+
+    .price {
+        width: 100%;
+        text-align: center;
+        margin: 0 auto;
+        background-color: $subtone;
+        padding: $subhead-margin 0;
+
+        .list {
+            width: 72%;
+            min-width: 1024;
+            margin: 0 auto $contents-margin auto;
+
+            .price-columns {
+                display: flex;
+                justify-content: space-between;
+
+                @include mq(sp) {
+                        display: block;
+                    }
+            }
+
+            .column-label {
+                margin-top: 235px;
+
+                li {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: #fff;
+                    width: 142px;
+                    min-height: 104px;
+                    font-size: 18px;
+
+                    .note {
+                        font-size: 14px;
+                    }
+
+                    &:first-child {
+                        border-radius: 30px 0 0 0;
+                    }
+
+                    &:last-child {
+                        border-radius: 0 0 0 30px;
+                    }
+                }
+            }
+
+            .column-contents {
+                width: 38%;
+                @include mq(sp) {
+                    width: 100%;
+                    margin: 30px auto 0px auto;
+                }
+
+                .tag {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 1.8rem;
+                    height: 75px;
+                    background-color: #508A7C;
+                    color: #fff;
+                    border-radius: 30px 30px 0 0;
+
+                    @include mq(sp) {
+                        font-size: 1.6rem;
+                        height: 56px;
+                    }
+
+                    &.basic {
+                        background-color: #50739B;
+                    }
+                }
+
+                .plan-title {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 160px;
+                    background-color: #5B9D93;
+                    color: #fff;
+                    font-size: 2.4rem;
+                    font-weight: 700;
+
+                    @include mq(sp) {
+                        height: 104px;
+                    }
+
+                    &.basic {
+                        background-color: #5995B5;
+                    }
+
+                    .price-number {
+                        font-size: 5rem;
+                        font-weight: 600;
+                        line-height: 1;
+                        letter-spacing: 0.08em;
+                        margin-top: 8px;
+
+                        @include mq(sp) {
+                            margin-top: 0;
+                        }
+                    }
+                }
+
+                .plan-cell {
+                    li {
+                        position: relative;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        height: 104px;
+                        background-color: #fff;
+                        font-size: 2.2rem;
+                        font-weight: 600;
+                        border-bottom: rgba($color: #707070, $alpha: 0.3) 2px solid;
+
+                        @include mq(sp) {
+                            justify-content: space-between;
+                            height: 80px;
+                            font-weight: 400;
+                            line-height: 1.2;
+
+                            p, i {
+                                width: 65%; 
+                                font-size: 2.4rem;
+
+                                &.plan-header {
+                                    width: 35%;
+                                    font-size: 1.6rem;
+                                }
+
+                                &.jp {
+                                    font-size: 1.96rem;
+                                }
+                            }
+
+                            span {
+                                font-size: 1.4rem;
+                            }
+                        }
+
+                        .num {
+                            font-size: 3.8rem;
+                            font-weight: 400;
+
+                            @include mq(sp) {
+                                font-size: 3rem;
+                            }
+                        }
+
+                        &:last-child {
+                            border: none;
+                        }
+                    }
+                }
+            }
+
+            .note {
+                line-height: 1.2;
+                text-align: right;
+            }
+        }
+
+        .option {
+            width: 88%;
+            min-width: 1024px;
+            margin: 0 auto;
+
+            @include mq(sp) {
+                    min-width: 375px;
+                }
+
+            h6 {
+                font-size: 2.4rem;
+                margin-bottom: 4px;
+            }
+
+            .option-price {
+                font-size: 2.2rem;
+            }
+
+            img {
+                margin-top: 16px;
+                width: 60%;
+            }
+
+            .option-contents {
+                margin-bottom: 48px;
+            }
+        }
+    }
+
+    .review {
+        padding: $section-margin 0;
+        width: 75%;
+        min-width: 1024px;
+        margin: 0 auto;
+
+        @include mq(sp) {
+            padding: 80px 0;
+            min-width: 375px;
+        }
+
+        .case-contents {
+            margin-bottom: $contents-margin;
+
+            @include mq(sp) {
+                margin-bottom: 40px;
+            }
+
+            .case-label {
+                text-align: left;
+                border-bottom: 1px solid $main-text;
+                margin-bottom: 3.2rem;
+
+                @include mq(sp) {
+                    margin-bottom: 1.6rem;
+                }
+            }
+
+            h6 {
+                font-size: 3.6rem;
+                margin-bottom: 24px;
+
+                @include mq(sp) {
+                    font-size: 2.8rem;
+                    margin-bottom: 1.4rem;
+                }
+            }
+
+            .case-title {
+                font-size: 2rem;
+                margin-bottom: 24px;
+
+                @include mq(sp) {
+                    width: 85%;
+                    margin: 0 auto 1.6em auto;
+                    font-size: 1.8rem;
+                }
+            }
+
+            .case-movie {
+                width: 80%;
+                margin: 0 auto;
+
+                img {
+                    width: 100%;
+                }
+
+                ul {
+                    text-align: left;
+                    margin: 32px 0 16px 0;
+
+                    @include mq(sp) {
+                        margin: 16px 0 12px 0;
+                    }
+
+                    span {
+                        display: inline-block;
+                        width: 80px;
+
+                        @include mq(sp) {
+                            width: 60px;
+                        }
+                    }
+                }
+            }
+
+            .case-discription {
+                width: 65%;
+                margin: 0 auto;
+
+                @include mq(sp) {
+                        text-align: left;
+                        width: 90%;
+                    }
+            }
+        }
+
+
+
+    }
+
+    .works {
+        padding: $subtone-margin 0;
+        background-color: $subtone;
+
+        @include mq(sp) {
+            padding: $subtone-margin-sp;
+        }
+
+        .works-contents {
+            width: 88%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+
+            @include mq(sp) {
+                width: 100%;
+            }
+
+            .work {
+                width: 30%;
+                margin-bottom: 32px;
+
+                @include mq(sp) {
+                    width: 100%;
+                }
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .faq {
+        padding: $section-margin 0;
+        width: 100%;
+        min-width: 1024px;
+        margin: 0 auto;
+
+        @include mq(sp) {
+            padding: 80px 0;
+            min-width: 375px;
+        }
+
+        .question {
+            width: 100%;
+            font-size: 1.8rem;
+            text-align: left;
+            padding: 36px;
+            background-color: $subtone;
+            margin-bottom: $faq-margin;
+
+            @include mq(sp) {
+                padding: 24px;
+                margin-bottom: 24px;
+            }
+
+            .question-title {
+                padding-bottom: 24px;
+                border-bottom: 1px solid $main-text;
+                @include mq(sp) {
+                    padding-bottom: 12px;
+                }
+            }
+
+            .answer {
+                padding-top: 24px;
+                @include mq(sp) {
+                    padding-top: 12px;
+                }
+            }
+        }
+    }
+
+    .flow {
+        padding: $subhead-margin 0;
+        background-color: $subtone;
+
+        .left {
+            width: calc((100% - 60px) * 0.4);
+
+            .flow-part {
+                &::after {
+                    content: "";
+                    position: absolute;
+                    right: -30px;
+                    bottom: 0;
+                    top: 0;
+                    width: 0px;
+                    height: 0px;
+                    margin: auto;
+                    border-style: solid;
+                    border-color: transparent transparent transparent #fff;
+                    border-width: 30px 0 30px 30px;
+                }
+            }
+        }
+
+        .right {
+            padding-top: calc(148px + 12vmin);
+            width: calc((100% - 60px) * 0.4);
+
+            .flow-part {
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: -30px;
+                    bottom: 0;
+                    top: 0;
+                    width: 0px;
+                    height: 0px;
+                    margin: auto;
+                    border-style: solid;
+                    border-color: transparent #fff transparent transparent;
+                    border-width: 30px 30px 30px 0;
+                }
+            }
+        }
+
+        .left,
+        .right {
+            li {
+                margin-bottom: calc(68px * 2 + 64px);
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+        }
+
+        .center {
+            width: calc((100% - 60px) * 0.13);
+            margin: 0 30px;
+            padding-top: calc(112px - 32px);
+
+            li {
+                p {
+                    width: 64px;
+                    height: 64px;
+                    background-color: #fff;
+                    border: 1px solid $main-text;
+                    font-size: 4.4rem;
+                    line-height: 1.5;
+                    margin: 0 auto;
+                }
+
+                .line {
+                    width: 2px;
+                    height: 148px;
+                    background-color: #7d7d7d;
+                    margin: 0 auto;
+                }
+            }
+        }
+
+        .flow-contents {
+            display: flex;
+            width: 75%;
+            min-width: 1024px;
+            margin: 0 auto;
+            justify-content: center;
+
+            @include mq(sp) {
+                display: block;
+                width: 90%;
+                min-width: 375px;
+            }
+        }
+
+        .flow-part {
+            position: relative;
+            background-color: white;
+            text-align: left;
+            padding: 32px;
+            height: 224px;
+
+            @include mq(sp) {
+                padding: 18px;
+                height: auto;
+                margin-bottom: 24px;
+            }
+
+            .flow-title {
+                font-size: 2.2rem;
+                padding-bottom: 24px;
+                border-bottom: 1px solid $main-text;
+
+                @include mq(sp) {
+                    padding-bottom: 12px;
+                }
+            }
+
+            .flow-description {
+                font-size: 1.8rem;
+                padding-top: 24px;
+
+                @include mq(sp) {
+                    padding-top: 12px;
+                }
+            }
+        }
+    }
+
+    footer {
+        background-color: $subtone;
+        padding: 36px;
+
+        @include mq(sp) {
+                display: block;
+                min-width: 375px;
+            }
+
+        .footer-title {
+            font-size: 2.6rem;
+            font-weight: 600;
+            padding-bottom: 16px;
+
+            @include mq(sp) {
+                text-align: center;
+                padding-bottom: 8px;
+                line-height: 1;
+            }
+        }
+
+        .footer-nav {
+            ul {
+                display: flex;
+                justify-content: center;
+                padding-bottom: 32px;
+                margin-bottom: 40px;
+                border-bottom: 2px solid #7d7d7d;
+
+                @include mq(sp) {
+                    flex-wrap: wrap;
+                }
+
+                li {
+                    font-size: 1.8rem;
+                    padding-right: 24px;
+                    margin-right: 24px;
+                    border-right: 1px solid #7d7d7d;
+
+                    @include mq(sp) {
+                        width: 28%;
+                        padding-right: 0px;
+                        margin-right: 0;
+                        border: none;
+                    }
+
+                    &:last-child {
+                        border: none;
+                    }
+                }
+
+                // 最後のliを左寄せにする
+                &::after {
+                    @include mq(sp) {
+                        content: "";
+                        display: block;
+                        width: 28%;
+                        height: 0;
+                    }
+                }
+            }
+        }
+
+        .company-info {
+            img {
+                width: 120px;
+                margin-bottom: 8px;
+            }
+        }
+    }
+}
