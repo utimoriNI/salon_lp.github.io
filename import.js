@@ -6,11 +6,26 @@ const app = Vue.createApp({
             height: window.innerHeight,
 
             images: [
-                './img/garden1.jpg',
-                './img/garden2.jpg',
-                './img/garden3.jpg',
-                './img/garden4.jpg',
-                './img/admin1.jpg',
+                {
+                    src: './img/garden1.jpg',
+                    title: '1枚目',
+                },
+                {
+                    src: './img/garden2.jpg',
+                    title: '2枚目',
+                },
+                {
+                    src: './img/garden3.jpg',
+                    title: '3枚目',
+                },
+                {
+                    src: './img/garden4.jpg',
+                    title: '4枚目',
+                },
+                {
+                    src: './img/admin1.jpg',
+                    title: '5枚目',
+                },
             ],
         }
     },
@@ -35,7 +50,8 @@ app.component('carousel', {
     template: `<!-- modal start -->
                     <div id="overlay" v-show="showModal"  v-on:click="closeModal">
                         <div class="modal-img">
-                            <img :src="imgList[modalImg]">
+                            <img :src="imgList[modalImg].src">
+                            <p class="gothic">{{ imgList[modalImg].title }}</p>
                         </div>
                     </div>
                     <!-- modal end -->
@@ -49,7 +65,8 @@ app.component('carousel', {
                         <!-- 画像エリア -->
                         <div class="slider">
                             <div v-for="number in [displayImg]" :key="number">
-                                <img :src="imgList[number]" @click="openModal(number)">
+                                <img :src="imgList[number].src" @click="openModal(number)">
+                                <p class="gothic">{{ imgList[number].title }}</p>
                             </div>
                         </div>
                         <div class="btn_right">
@@ -68,7 +85,7 @@ app.component('carousel', {
             displayImg: 0,
             style: '',
             showModal: false,
-            modalImg: undefined,
+            modalImg: 0,
         }
     },
 
@@ -95,7 +112,7 @@ app.component('carousel', {
         openModal: function (number) {
             this.showModal = true;
             this.modalImg = number;
-            console.log(this.modalImg);
+            console.log(this.imgList[this.modalImg]);
         },
         closeModal: function () {
             this.showModal = false;
