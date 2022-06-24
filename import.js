@@ -12,8 +12,6 @@ const app = Vue.createApp({
                 './img/garden4.jpg',
                 './img/admin1.jpg',
             ],
-
-
         }
     },
     methods: {
@@ -34,7 +32,14 @@ const app = Vue.createApp({
 })
 
 app.component('carousel', {
-    template: `<div class="carousel">
+    template: `<!-- modal start -->
+                    <div id="overlay" v-show="showModal"  v-on:click="closeModal">
+                        <div class="modal-img">
+                            <img :src="imgList[modalImg]">
+                        </div>
+                    </div>
+                    <!-- modal end -->
+                    <div class="carousel">
                         <!-- 戻る -->
                         <div class="btn_left">
                             <button type="button" class="button button-clear" @click="prev">
@@ -44,7 +49,7 @@ app.component('carousel', {
                         <!-- 画像エリア -->
                         <div class="slider">
                             <div v-for="number in [displayImg]" :key="number">
-                                <img :src="imgList[number]">
+                                <img :src="imgList[number]" @click="openModal(number)">
                             </div>
                         </div>
                         <div class="btn_right">
@@ -54,7 +59,7 @@ app.component('carousel', {
                         </div>
                     </div>`,
     props: {
-        imgList: Array
+        imgList: Array,
     },
 
     data() {
@@ -62,6 +67,8 @@ app.component('carousel', {
             timerId: undefined,
             displayImg: 0,
             style: '',
+            showModal: false,
+            modalImg: undefined,
         }
     },
 
@@ -83,6 +90,16 @@ app.component('carousel', {
             }
             this.style = "slide-left"
         },
+
+        // モーダルの表示を切り替える
+        openModal: function (number) {
+            this.showModal = true;
+            this.modalImg = number;
+            console.log(this.modalImg);
+        },
+        closeModal: function () {
+            this.showModal = false;
+        }
     }
 })
 
