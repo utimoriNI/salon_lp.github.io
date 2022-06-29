@@ -469,6 +469,7 @@ main .service .function .panels {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-bottom: 32px;
 }
 
 main .service .function .panels .panel {
@@ -841,11 +842,11 @@ main .review .case-contents .case-movie ul span {
 main .review .case-contents .case-discription {
   width: 65%;
   margin: 0 auto;
+  text-align: left;
 }
 
 @media screen and (max-width: 768px) {
   main .review .case-contents .case-discription {
-    text-align: left;
     width: 90%;
   }
 }
@@ -969,7 +970,7 @@ main .flow .left .flow-part::after {
 }
 
 main .flow .right {
-  padding-top: calc(148px + 12vmin);
+  padding-top: calc(148px + 6vmin);
   width: calc((100% - 60px) * 0.4);
 }
 

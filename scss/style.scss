@@ -408,6 +408,7 @@ main {
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: space-between;
+                margin-bottom: 32px;
 
                 .panel {
                     display: flex;
@@ -717,9 +718,9 @@ main {
             .case-discription {
                 width: 65%;
                 margin: 0 auto;
+                text-align: left;
 
                 @include mq(sp) {
-                        text-align: left;
                         width: 90%;
                     }
             }
@@ -809,6 +810,7 @@ main {
         background-color: $subtone;
 
         .left {
+            // 幅40% -60px=三角二個
             width: calc((100% - 60px) * 0.4);
 
             .flow-part {
@@ -829,7 +831,7 @@ main {
         }
 
         .right {
-            padding-top: calc(148px + 12vmin);
+            padding-top: calc(148px + 6vmin);
             width: calc((100% - 60px) * 0.4);
 
             .flow-part {
