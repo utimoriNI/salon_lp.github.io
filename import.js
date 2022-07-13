@@ -27,6 +27,75 @@ const app = Vue.createApp({
                     title: '5枚目',
                 },
             ],
+
+            // shopifyの機能一覧
+            panels: [
+                {
+                    img: './img/cart.svg',
+                    label: 'カート機能',
+                },
+                {
+                    img: './img/box.svg',
+                    label: '商品管理',
+                },
+                {
+                    img: './img/graph.svg',
+                    label: '売上管理',
+                },
+                {
+                    img: './img/SNS.svg',
+                    label: '顧客管理',
+                },
+                {
+                    img: './img/license.svg',
+                    label: 'カート機能',
+                },
+                {
+                    img: './img/SEO.svg',
+                    label: 'マーケティング',
+                },
+                {
+                    img: './img/layout.svg',
+                    label: 'デザイン',
+                },
+                {
+                    img: './img/html.svg',
+                    label: 'カスタマイズ',
+                },
+                {
+                    img: './img/longtale.svg',
+                    label: '商品分析',
+                },
+                {
+                    img: './img/loupe.svg',
+                    label: 'サイト分析',
+                },
+                {
+                    img: './img/net.svg',
+                    label: 'スマホで運営',
+                },
+                {
+                    img: './img/earth.svg',
+                    label: '海外展開',
+                },
+            ],
+
+            // PC・スマホ両方に表示させる制作実績
+            // 表示する店舗を増やしたい場合は別の配列にしてそれをPCのみに表示させる
+            works1: [
+                {
+                    img: './img/kv.jpg',
+                    name: '店名1',
+                },
+                {
+                    img: './img/kv.jpg',
+                    name: '店名1',
+                },
+                {
+                    img: './img/kv.jpg',
+                    name: '店名1',
+                },
+            ],
         }
     },
     methods: {

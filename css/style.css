@@ -882,7 +882,6 @@ main .works .works-contents {
 
 main .works .works-contents .work {
   width: 30%;
-  margin-bottom: 32px;
 }
 
 @media screen and (max-width: 768px) {
