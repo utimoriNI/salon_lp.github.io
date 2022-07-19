@@ -405,62 +405,62 @@ main .introduced .stores {
   }
 }
 
-main .service {
+main #service {
   width: 100%;
   margin: 0 auto;
   padding: 152px 0;
 }
 
 @media screen and (max-width: 768px) {
-  main .service {
+  main #service {
     padding: 80px 0;
   }
 }
 
-main .service .introduction {
+main #service .introduction {
   width: 720px;
   margin: 0 auto;
 }
 
 @media screen and (max-width: 768px) {
-  main .service .introduction {
+  main #service .introduction {
     width: 375px;
   }
 }
 
-main .service .text {
+main #service .text {
   margin: 0 auto 88px auto;
 }
 
 @media screen and (max-width: 768px) {
-  main .service .text {
+  main #service .text {
     margin-bottom: 40px;
   }
 }
 
-main .service .text p {
+main #service .text p {
   margin-bottom: 30px;
   font-weight: 500;
 }
 
-main .service .text p:last-child {
+main #service .text p:last-child {
   margin-bottom: 0;
 }
 
-main .service .function {
+main #service .function {
   width: 890px;
   margin: 0 auto;
   margin-bottom: 152px;
 }
 
 @media screen and (max-width: 768px) {
-  main .service .function {
+  main #service .function {
     width: 375px;
     margin-bottom: 80px;
   }
 }
 
-main .service .function .panels {
+main #service .function .panels {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -472,7 +472,7 @@ main .service .function .panels {
   margin-bottom: 32px;
 }
 
-main .service .function .panels .panel {
+main #service .function .panels .panel {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -489,29 +489,29 @@ main .service .function .panels .panel {
 }
 
 @media screen and (max-width: 768px) {
-  main .service .function .panels .panel {
+  main #service .function .panels .panel {
     width: 180px;
     height: 180px;
     margin: 0 auto 16px auto;
   }
 }
 
-main .service .function .panels .panel img {
+main #service .function .panels .panel img {
   height: 85px;
   fill: #A49240;
   margin-bottom: 8px;
 }
 
-main .service .function .panels .panel p {
+main #service .function .panels .panel p {
   font-size: 1.8rem;
   line-height: 1.2;
 }
 
-main .plan {
+main #plan {
   margin-bottom: 152px;
 }
 
-main .price {
+main #price {
   width: 100%;
   text-align: center;
   margin: 0 auto;
@@ -519,13 +519,13 @@ main .price {
   padding: 64px 0;
 }
 
-main .price .list {
+main #price .list {
   width: 72%;
   min-width: 1024;
   margin: 0 auto 88px auto;
 }
 
-main .price .list .price-columns {
+main #price .list .price-columns {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -535,16 +535,16 @@ main .price .list .price-columns {
 }
 
 @media screen and (max-width: 768px) {
-  main .price .list .price-columns {
+  main #price .list .price-columns {
     display: block;
   }
 }
 
-main .price .list .column-label {
+main #price .list .column-label {
   margin-top: 235px;
 }
 
-main .price .list .column-label li {
+main #price .list .column-label li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -562,30 +562,30 @@ main .price .list .column-label li {
   font-size: 18px;
 }
 
-main .price .list .column-label li .note {
+main #price .list .column-label li .note {
   font-size: 14px;
 }
 
-main .price .list .column-label li:first-child {
+main #price .list .column-label li:first-child {
   border-radius: 30px 0 0 0;
 }
 
-main .price .list .column-label li:last-child {
+main #price .list .column-label li:last-child {
   border-radius: 0 0 0 30px;
 }
 
-main .price .list .column-contents {
+main #price .list .column-contents {
   width: 38%;
 }
 
 @media screen and (max-width: 768px) {
-  main .price .list .column-contents {
+  main #price .list .column-contents {
     width: 100%;
     margin: 30px auto 0px auto;
   }
 }
 
-main .price .list .column-contents .tag {
+main #price .list .column-contents .tag {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -603,17 +603,17 @@ main .price .list .column-contents .tag {
 }
 
 @media screen and (max-width: 768px) {
-  main .price .list .column-contents .tag {
+  main #price .list .column-contents .tag {
     font-size: 1.6rem;
     height: 56px;
   }
 }
 
-main .price .list .column-contents .tag.basic {
+main #price .list .column-contents .tag.basic {
   background-color: #50739B;
 }
 
-main .price .list .column-contents .plan-title {
+main #price .list .column-contents .plan-title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -631,16 +631,16 @@ main .price .list .column-contents .plan-title {
 }
 
 @media screen and (max-width: 768px) {
-  main .price .list .column-contents .plan-title {
+  main #price .list .column-contents .plan-title {
     height: 104px;
   }
 }
 
-main .price .list .column-contents .plan-title.basic {
+main #price .list .column-contents .plan-title.basic {
   background-color: #5995B5;
 }
 
-main .price .list .column-contents .plan-title .price-number {
+main #price .list .column-contents .plan-title .price-number {
   font-size: 5rem;
   font-weight: 600;
   line-height: 1;
@@ -649,12 +649,12 @@ main .price .list .column-contents .plan-title .price-number {
 }
 
 @media screen and (max-width: 768px) {
-  main .price .list .column-contents .plan-title .price-number {
+  main #price .list .column-contents .plan-title .price-number {
     margin-top: 0;
   }
 }
 
-main .price .list .column-contents .plan-cell li {
+main #price .list .column-contents .plan-cell li {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -673,7 +673,7 @@ main .price .list .column-contents .plan-cell li {
 }
 
 @media screen and (max-width: 768px) {
-  main .price .list .column-contents .plan-cell li {
+  main #price .list .column-contents .plan-cell li {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -681,73 +681,73 @@ main .price .list .column-contents .plan-cell li {
     font-weight: 400;
     line-height: 1.2;
   }
-  main .price .list .column-contents .plan-cell li p, main .price .list .column-contents .plan-cell li i {
+  main #price .list .column-contents .plan-cell li p, main #price .list .column-contents .plan-cell li i {
     width: 65%;
     font-size: 2.4rem;
   }
-  main .price .list .column-contents .plan-cell li p.plan-header, main .price .list .column-contents .plan-cell li i.plan-header {
+  main #price .list .column-contents .plan-cell li p.plan-header, main #price .list .column-contents .plan-cell li i.plan-header {
     width: 35%;
     font-size: 1.6rem;
   }
-  main .price .list .column-contents .plan-cell li p.jp, main .price .list .column-contents .plan-cell li i.jp {
+  main #price .list .column-contents .plan-cell li p.jp, main #price .list .column-contents .plan-cell li i.jp {
     font-size: 1.96rem;
   }
-  main .price .list .column-contents .plan-cell li span {
+  main #price .list .column-contents .plan-cell li span {
     font-size: 1.4rem;
   }
 }
 
-main .price .list .column-contents .plan-cell li .num {
+main #price .list .column-contents .plan-cell li .num {
   font-size: 3.8rem;
   font-weight: 400;
 }
 
 @media screen and (max-width: 768px) {
-  main .price .list .column-contents .plan-cell li .num {
+  main #price .list .column-contents .plan-cell li .num {
     font-size: 3rem;
   }
 }
 
-main .price .list .column-contents .plan-cell li:last-child {
+main #price .list .column-contents .plan-cell li:last-child {
   border: none;
 }
 
-main .price .list .note {
+main #price .list .note {
   line-height: 1.2;
   text-align: right;
 }
 
-main .price .option {
+main #price .option {
   width: 88%;
   min-width: 1024px;
   margin: 0 auto;
 }
 
 @media screen and (max-width: 768px) {
-  main .price .option {
+  main #price .option {
     min-width: 375px;
   }
 }
 
-main .price .option h6 {
+main #price .option h6 {
   font-size: 2.4rem;
   margin-bottom: 4px;
 }
 
-main .price .option .option-price {
+main #price .option .option-price {
   font-size: 2.2rem;
 }
 
-main .price .option img {
+main #price .option img {
   margin-top: 16px;
   width: 60%;
 }
 
-main .price .option .option-contents {
+main #price .option .option-contents {
   margin-bottom: 48px;
 }
 
-main .review {
+main #review {
   padding: 152px 0;
   width: 75%;
   min-width: 1024px;
@@ -755,114 +755,114 @@ main .review {
 }
 
 @media screen and (max-width: 768px) {
-  main .review {
+  main #review {
     padding: 80px 0;
     min-width: 375px;
   }
 }
 
-main .review .case-contents {
+main #review .case-contents {
   margin-bottom: 88px;
 }
 
 @media screen and (max-width: 768px) {
-  main .review .case-contents {
+  main #review .case-contents {
     margin-bottom: 40px;
   }
 }
 
-main .review .case-contents .case-label {
+main #review .case-contents .case-label {
   text-align: left;
   border-bottom: 1px solid #2B2010;
   margin-bottom: 3.2rem;
 }
 
 @media screen and (max-width: 768px) {
-  main .review .case-contents .case-label {
+  main #review .case-contents .case-label {
     margin-bottom: 1.6rem;
   }
 }
 
-main .review .case-contents h6 {
+main #review .case-contents h6 {
   font-size: 3.6rem;
   margin-bottom: 24px;
 }
 
 @media screen and (max-width: 768px) {
-  main .review .case-contents h6 {
+  main #review .case-contents h6 {
     font-size: 2.8rem;
     margin-bottom: 1.4rem;
   }
 }
 
-main .review .case-contents .case-title {
+main #review .case-contents .case-title {
   font-size: 2rem;
   margin-bottom: 24px;
 }
 
 @media screen and (max-width: 768px) {
-  main .review .case-contents .case-title {
+  main #review .case-contents .case-title {
     width: 85%;
     margin: 0 auto 1.6em auto;
     font-size: 1.8rem;
   }
 }
 
-main .review .case-contents .case-movie {
+main #review .case-contents .case-movie {
   width: 80%;
   margin: 0 auto;
 }
 
-main .review .case-contents .case-movie img {
+main #review .case-contents .case-movie img {
   width: 100%;
 }
 
-main .review .case-contents .case-movie ul {
+main #review .case-contents .case-movie ul {
   text-align: left;
   margin: 32px 0 16px 0;
 }
 
 @media screen and (max-width: 768px) {
-  main .review .case-contents .case-movie ul {
+  main #review .case-contents .case-movie ul {
     margin: 16px 0 12px 0;
   }
 }
 
-main .review .case-contents .case-movie ul span {
+main #review .case-contents .case-movie ul span {
   display: inline-block;
   width: 80px;
 }
 
 @media screen and (max-width: 768px) {
-  main .review .case-contents .case-movie ul span {
+  main #review .case-contents .case-movie ul span {
     width: 60px;
   }
 }
 
-main .review .case-contents .case-discription {
+main #review .case-contents .case-discription {
   width: 65%;
   margin: 0 auto;
   text-align: left;
 }
 
 @media screen and (max-width: 768px) {
-  main .review .case-contents .case-discription {
+  main #review .case-contents .case-discription {
     width: 90%;
   }
 }
 
-main .works {
+main #works {
   padding: 128px 0;
   background-color: #F8F7F5;
 }
 
 @media screen and (max-width: 768px) {
-  main .works {
+  main #works {
     padding: 64px;
   }
 }
 
-main .works .works-contents {
+main #works .works-contents {
   width: 88%;
   margin: 0 auto;
   display: -webkit-box;
@@ -875,26 +875,26 @@ main .works .works-contents {
 }
 
 @media screen and (max-width: 768px) {
-  main .works .works-contents {
+  main #works .works-contents {
     width: 100%;
   }
 }
 
-main .works .works-contents .work {
+main #works .works-contents .work {
   width: 30%;
 }
 
 @media screen and (max-width: 768px) {
-  main .works .works-contents .work {
+  main #works .works-contents .work {
     width: 100%;
   }
 }
 
-main .works .works-contents .work img {
+main #works .works-contents .work img {
   width: 100%;
 }
 
-main .faq {
+main #faq {
   padding: 152px 0;
   width: 100%;
   min-width: 1024px;
@@ -902,13 +902,13 @@ main .faq {
 }
 
 @media screen and (max-width: 768px) {
-  main .faq {
+  main #faq {
     padding: 80px 0;
     min-width: 375px;
   }
 }
 
-main .faq .question {
+main #faq .question {
   width: 100%;
   font-size: 1.8rem;
   text-align: left;
@@ -918,43 +918,43 @@ main .faq .question {
 }
 
 @media screen and (max-width: 768px) {
-  main .faq .question {
+  main #faq .question {
     padding: 24px;
     margin-bottom: 24px;
   }
 }
 
-main .faq .question .question-title {
+main #faq .question .question-title {
   padding-bottom: 24px;
   border-bottom: 1px solid #2B2010;
 }
 
 @media screen and (max-width: 768px) {
-  main .faq .question .question-title {
+  main #faq .question .question-title {
     padding-bottom: 12px;
   }
 }
 
-main .faq .question .answer {
+main #faq .question .answer {
   padding-top: 24px;
 }
 
 @media screen and (max-width: 768px) {
-  main .faq .question .answer {
+  main #faq .question .answer {
     padding-top: 12px;
   }
 }
 
-main .flow {
+main #flow {
   padding: 64px 0;
   background-color: #F8F7F5;
 }
 
-main .flow .left {
+main #flow .left {
   width: calc((100% - 60px) * 0.4);
 }
 
-main .flow .left .flow-part::after {
+main #flow .left .flow-part::after {
   content: "";
   position: absolute;
   right: -30px;
@@ -968,12 +968,12 @@ main .flow .left .flow-part::after {
   border-width: 30px 0 30px 30px;
 }
 
-main .flow .right {
+main #flow .right {
   padding-top: calc(148px + 6vmin);
   width: calc((100% - 60px) * 0.4);
 }
 
-main .flow .right .flow-part::after {
+main #flow .right .flow-part::after {
   content: "";
   position: absolute;
   left: -30px;
@@ -987,23 +987,23 @@ main .flow .right .flow-part::after {
   border-width: 30px 30px 30px 0;
 }
 
-main .flow .left li,
-main .flow .right li {
+main #flow .left li,
+main #flow .right li {
   margin-bottom: calc(68px * 2 + 64px);
 }
 
-main .flow .left li:last-child,
-main .flow .right li:last-child {
+main #flow .left li:last-child,
+main #flow .right li:last-child {
   margin-bottom: 0;
 }
 
-main .flow .center {
+main #flow .center {
   width: calc((100% - 60px) * 0.13);
   margin: 0 30px;
   padding-top: calc(112px - 32px);
 }
 
-main .flow .center li p {
+main #flow .center li p {
   width: 64px;
   height: 64px;
   background-color: #fff;
@@ -1013,14 +1013,14 @@ main .flow .center li p {
   margin: 0 auto;
 }
 
-main .flow .center li .line {
+main #flow .center li .line {
   width: 2px;
   height: 148px;
   background-color: #7d7d7d;
   margin: 0 auto;
 }
 
-main .flow .flow-contents {
+main #flow .flow-contents {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1033,14 +1033,14 @@ main .flow .flow-contents {
 }
 
 @media screen and (max-width: 768px) {
-  main .flow .flow-contents {
+  main #flow .flow-contents {
     display: block;
     width: 90%;
     min-width: 375px;
   }
 }
 
-main .flow .flow-part {
+main #flow .flow-part {
   position: relative;
   background-color: white;
   text-align: left;
@@ -1049,32 +1049,32 @@ main .flow .flow-part {
 }
 
 @media screen and (max-width: 768px) {
-  main .flow .flow-part {
+  main #flow .flow-part {
     padding: 18px;
     height: auto;
     margin-bottom: 24px;
   }
 }
 
-main .flow .flow-part .flow-title {
+main #flow .flow-part .flow-title {
   font-size: 2.2rem;
   padding-bottom: 24px;
   border-bottom: 1px solid #2B2010;
 }
 
 @media screen and (max-width: 768px) {
-  main .flow .flow-part .flow-title {
+  main #flow .flow-part .flow-title {
     padding-bottom: 12px;
   }
 }
 
-main .flow .flow-part .flow-description {
+main #flow .flow-part .flow-description {
   font-size: 1.8rem;
   padding-top: 24px;
 }
 
 @media screen and (max-width: 768px) {
-  main .flow .flow-part .flow-description {
+  main #flow .flow-part .flow-description {
     padding-top: 12px;
   }
 }

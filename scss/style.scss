@@ -359,7 +359,7 @@ main {
         }
     }
 
-    .service {
+    #service {
         width: 100%;
         margin: 0 auto;
         padding: 152px 0;
@@ -441,11 +441,11 @@ main {
         }
     }
 
-    .plan {
+    #plan {
         margin-bottom: $section-margin;
     }
 
-    .price {
+    #price {
         width: 100%;
         text-align: center;
         margin: 0 auto;
@@ -639,7 +639,7 @@ main {
         }
     }
 
-    .review {
+    #review {
         padding: $section-margin 0;
         width: 75%;
         min-width: 1024px;
@@ -730,7 +730,7 @@ main {
 
     }
 
-    .works {
+    #works {
         padding: $subtone-margin 0;
         background-color: $subtone;
 
@@ -763,7 +763,7 @@ main {
         }
     }
 
-    .faq {
+    #faq {
         padding: $section-margin 0;
         width: 100%;
         min-width: 1024px;
@@ -804,7 +804,7 @@ main {
         }
     }
 
-    .flow {
+    #flow {
         padding: $subhead-margin 0;
         background-color: $subtone;
 
