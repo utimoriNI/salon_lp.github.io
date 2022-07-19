@@ -387,9 +387,15 @@ main .introduced .stores {
   margin: 0 auto;
 }
 
+main .introduced .stores img {
+  width: 80%;
+}
+
 @media screen and (min-width: 769px) and (max-width: 1023px) {
   main .introduced .stores {
     width: 769px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 }
 
@@ -695,6 +701,11 @@ main #price .list .column-contents .plan-cell li {
   main #price .list .column-contents .plan-cell li span {
     font-size: 1.4rem;
   }
+}
+
+main #price .list .column-contents .plan-cell li.num {
+  font-size: 3.8rem;
+  font-weight: 400;
 }
 
 main #price .list .column-contents .plan-cell li .num {

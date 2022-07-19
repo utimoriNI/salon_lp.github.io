@@ -343,8 +343,13 @@ main {
             justify-content: space-around;
             margin: 0 auto;
 
+            img {
+                width: 80%;
+            }
+
             @include mq(tab) {
                 width: 769px;
+                flex-wrap: wrap;
             }
 
             @include mq(sp) {
@@ -587,6 +592,11 @@ main {
                                 font-size: 1.4rem;
                             }
                         }
+
+                    &.num {
+                        font-size: 3.8rem;
+                        font-weight: 400;
+                    }
 
                         .num {
                             font-size: 3.8rem;

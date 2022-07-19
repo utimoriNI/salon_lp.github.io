@@ -5,6 +5,30 @@ const app = Vue.createApp({
             width: window.innerWidth,
             height: window.innerHeight,
 
+            // 導入店舗 画像を追加するときは
+            stores: [
+                {
+                    src: './img/acqua.jpg',
+                    name: 'ACQUA',
+                },
+
+                {
+                    src: './img/acqua.jpg',
+                    name: 'ACQUA',
+                },
+
+                {
+                    src: './img/acqua.jpg',
+                    name: 'ACQUA',
+                },
+
+                {
+                    src: './img/acqua.jpg',
+                    name: 'ACQUA',
+                }
+            ],
+
+            // サンプル画面
             images: [
                 {
                     src: './img/garden1.jpg',

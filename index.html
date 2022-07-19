@@ -75,12 +75,11 @@
                 <h4>Introduced Stores</h4>
                 <div class="subtitle">導入店舗</div>
             </div>
-            <div class="stores">
-                <img src="./img/sample.jpg" alt="">
-                <img src="./img/sample.jpg" alt="">
-                <img src="./img/sample.jpg" alt="">
-                <img src="./img/sample.jpg" alt="">
-            </div>
+            <ul class="stores">
+                <li v-for="store in stores" :key="store">
+                    <img :src="store.src" alt="store.name">
+                </li>
+            </ul>
         </div>
 
         <div id="service">
@@ -319,11 +318,11 @@
             <div class="case">
                 <div class="case-contents">
                     <p class="case-label">CASE 01</p>
-                    <h6>Tenmei</h6>
+                    <h6>ACQUA</h6>
                     <p class="case-title">運用までサポートしてもらえるので、
                         安心してオンラインショップを開設できました。</p>
                     <div class="case-movie">
-                        <img src="./img/kv.jpg" alt="" srcset="">
+                        <img src="./img/acqua_sample.jpg" alt="" srcset="">
                         <ul>
                             <li><span>プラン</span>：ベーシックプラン</li>
                             <li><span>製作費</span> ：&yen;30,000</li>
